@@ -15,7 +15,7 @@ function App() {
 
   const handleStart = async () => {
     try {
-      const res = await fetch('http://localhost:3001/scribe-token')
+      const res = await fetch('https://speech-to-text-ai-m7ex.vercel.app/scribe-token')
       const json = await res.json()
       if (!json.token) {
         toastr.error(json.error || 'Failed to get token')
